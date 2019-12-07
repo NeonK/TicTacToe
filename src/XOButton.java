@@ -30,21 +30,8 @@ public class XOButton extends JButton  implements ActionListener {
     }
 
     public static void getLocation(int x, int y) {
-        if(x == 0) {
-            tempX = 0;
-        } else if(x == 128) {
-            tempX = 1;
-        } else if(x == 256) {
-            tempX = 2;
-        }
-
-        if(y == 0) {
-            tempY = 0;
-        } else if(y == 120) {
-            tempY = 1;
-        } else if(y == 240) {
-            tempY = 2;
-        }
+        tempX = (x / 128);
+        tempY = (y / 120);
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -55,16 +42,19 @@ public class XOButton extends JButton  implements ActionListener {
                 setIcon(null);
                 getLocation(this.getX(), this.getY());
                 Performer.update(0, tempX, tempY);
+                Performer.scan();
                 break;
             case 1:
                 setIcon(X);
                 getLocation(this.getX(), this.getY());
                 Performer.update(1, tempX, tempY);
+                Performer.scan();
                 break;
             case 2:
                 setIcon(O);
                 getLocation(this.getX(), this.getY());
                 Performer.update(2, tempX, tempY);
+                Performer.scan();
                 break;
         }
     }
