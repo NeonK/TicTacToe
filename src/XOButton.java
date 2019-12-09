@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
  */
 public class XOButton extends JButton  implements ActionListener {
     public static int[] XOStatus;
+    public static Object[] options = {"X", "O"};
     public static int i = 0;
     public static int tempX;
     public static int tempY;
@@ -29,14 +30,32 @@ public class XOButton extends JButton  implements ActionListener {
         i++;
     }
 
+    /**
+     * Updates the location of each of the buttons by taking its x and y and dividing it by 128 and 120.
+     * @param x
+     * @param y
+     */
     public static void getLocation(int x, int y) {
         tempX = (x / 128);
         tempY = (y / 120);
     }
 
+    /**
+     * This is one of the major deciding voids for the program. It sends out a message asking the user
+     * which button he/she wants on that square, and then updates it to that mark.
+     * @param e
+     */
     public void actionPerformed(ActionEvent e) {
-        value++;
-        value %= 3;
+        int n = JOptionPane.showOptionDialog(null, "Which mark you would like to place?", "Mark Selection", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+        if(n == 0) {
+            value = 1;
+        } else if(n == 1) {
+            value = 2;
+        } else {
+            value = 0;
+        }
+        // value++;
+        // value %= 3;
         switch(value) {
             case 0:
                 setIcon(null);

@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Performer {
     public static int i;
     public static int mark;
@@ -17,25 +19,31 @@ public class Performer {
         buttonStatus[x][y] = status;
     }
 
+    /**
+     * This is the main scanning function. it first checks to see if X has a tic-tac-toe, then O. Then if all slots have a mark, it is a tie.
+     */
     public static void scan() {
         if(hasTicTacToe(1)) {
-
+            JOptionPane.showMessageDialog(null, "X wins!");
+            System.exit(0);
         }
         if(hasTicTacToe(2)) {
-
+            JOptionPane.showMessageDialog(null, "O wins!");
+            System.exit(0);
         }
         if(hasTie()) {
-
+            JOptionPane.showMessageDialog(null, "Tie.");
+            System.exit(0);
         }
     }
 
     /**
-     * Scans to see if the certain marking has a tictactoe by going through all of the differnet combinations.
+     * Scans to see if the certain marking has a tictactoe by going through all of the different combinations.
      * @param mark
      * @return
      */
     public static boolean hasTicTacToe(int mark) {
-        if((buttonStatus[0][0] == mark) && (buttonStatus[0][1] == mark) && (buttonStatus[0][1] == mark)) {
+        if((buttonStatus[0][0] == mark) && (buttonStatus[0][1] == mark) && (buttonStatus[0][2] == mark)) {
             /*
             X - -
             X - -

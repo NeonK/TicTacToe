@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * This is the main class for a TicTacToe game created by me.
- * The code I got for this came from this youtube tutorial: https://www.youtube.com/watch?v=Db3cC5iPrOM
+ * This is the main class for a TicTacToe game
+ * The code I got for this class came from this youtube tutorial: https://www.youtube.com/watch?v=Db3cC5iPrOM
  */
 public class TicTacToe extends JFrame {
     // Global Variables
