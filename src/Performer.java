@@ -73,14 +73,14 @@ public class Performer {
             - - -
              */
             return true;
-        } else if((buttonStatus[1][0] == mark) && (buttonStatus[1][1] == mark) && (buttonStatus[1][2]) == mark) {
+        } else if((buttonStatus[0][1] == mark) && (buttonStatus[1][1] == mark) && (buttonStatus[2][1]) == mark) {
             /*
             - - -
             X X X
             - - -
              */
             return true;
-        } else if((buttonStatus[2][0] == mark) && (buttonStatus[2][1] == mark) && (buttonStatus[2][2] == mark)) {
+        } else if((buttonStatus[0][2] == mark) && (buttonStatus[1][2] == mark) && (buttonStatus[2][2] == mark)) {
             /*
             - - -
             - - -
