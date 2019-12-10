@@ -1,8 +1,10 @@
 import javax.swing.*;
 
+/**
+ * This is the class that configures most of the deciding factors of the game, such as who wins or if there is a tie.
+ */
 public class Performer {
-    public static int i;
-    public static int mark;
+    // This is the two-dimensional array that stores the markings.
     public static int[][] buttonStatus = {
             {0, 0, 0},
             {0, 0, 0},

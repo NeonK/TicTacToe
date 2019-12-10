@@ -26,7 +26,6 @@ public class TicTacToe extends JFrame {
             p.add(buttons[i]);
         }
         add(p);
-
         setVisible(true);
     }
 }

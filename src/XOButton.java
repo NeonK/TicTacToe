@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
  * The code I got for this came from this youtube tutorial: https://www.youtube.com/watch?v=Db3cC5iPrOM
  */
 public class XOButton extends JButton  implements ActionListener {
-    public static int[] XOStatus;
     public static Object[] options = {"X", "O"};
     public static int i = 0;
     public static int tempX;
